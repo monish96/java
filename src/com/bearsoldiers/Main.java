@@ -1,6 +1,7 @@
 package com.bearsoldiers;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
@@ -112,10 +113,151 @@ public class Main {
 
 
 
+        // if statements
+
+        int age = 18;
+
+        if(age == 18){
+            System.out.println("You are an adult");
+        }else{
+            System.out.println("you are not an adult");
+        }
+
+        if(age > 18) {
+            System.out.println("You are greater than 18");
+        }else if(age < 18){
+            System.out.println("You are younger than 18");
+        }else {
+            System.out.println("You are 18");
+        }
+
+//Ternary operator
+
+
+        String message = age >= 18 ? "You are an adult" : "You are not an adult";
+        System.out.println(message);
+
+        //    Switch Statements
+
+        String gender = "FEMALE";
+
+        if(gender.equals("MALE")){
+            System.out.println("You are a male");
+        }else if(gender.equals("FEMALE")){
+            System.out.println("You are a female");
+        }else {
+            System.out.println("Not applicable");
+        }
+
+        switch (gender){
+            case "MALE":
+                System.out.println("Male");
+                break; // Java 11 needs it
+            case "Female":
+                System.out.println("Female");
+                break;
+            default:
+                System.out.println("Prefer not to say");
+                // no need add break for default
+        }
+
+
+//        Arrays
+
+        int [] categories = new int[5];
+        boolean [] categoriesBoolean = new boolean[5];
+        String [] categoriesStrings = new String[5];
+        System.out.println(Arrays.toString(categories)); // Array class should be imported
+        System.out.println(Arrays.toString(categoriesBoolean));
+        System.out.println(Arrays.toString(categoriesStrings));
+        // Arrays in Java starts from zero. Lua starts from 1
+        categories[0] = 1;
+//        categories[6] = 1; // we will get error here Index 6 out of bounds for length 5
+        System.out.println(Arrays.toString(categories));
+
+        // Simple form of array
+        int [] simple = {2,0,1, 100};
+        System.out.println(Arrays.toString(simple));
+
+        // Length property
+        System.out.println(simple.length);
+
+        String [] stringArray = {"monish" , "bear soldiers"};
+
+        System.out.println(Arrays.toString(stringArray));
+        System.out.println(stringArray.length);
+
+        // Arrays and indexes
+
+        int [] example1 = {2,3,4,6,100};
+
+        int oneHundred = example1[4];
+        int four = example1[2];
+        int lastElement = example1[example1.length - 1];
+        System.out.println(oneHundred);
+        System.out.println(four);
+        System.out.println(lastElement);
+
+        // Loops control structures
+
+        for(int i = 0; i < example1.length; i++){
+            System.out.println(example1[i]);
+        }
+
+        // Enhanced for loops
+        for(int j : example1){
+            System.out.println(j);
+        }
+
+        for (int i : example1) {
+            System.out.println(i);
+        }
+
+        // example1.for
+
+        for (int i = 0; i < example1.length; i++) {
+
+            if(example1[i]%2 == 0){
+                continue;
+            }
+
+            System.out.println(example1[i]);
+
+            if(example1[i] == 4){
+                break;
+            }
+        }
+
+        // Advance
+        Arrays.stream(example1).forEach(System.out::println);
+
+        // While loop
+
+        System.out.println("While loop");
+        int count = 0;
+        while(count < 5){
+            System.out.println(count);
+            count++;
+        }
+
+        // Do While loop
+
+        System.out.println("do While loop");
+        int doCount = 5;
+        do{
+            System.out.println(doCount);
+            doCount++;
+        }while(doCount < 5);
+
+
+//        System.out.println("Scanner");
 
 
 
+
+        // End of block
     }
+
 
 
     // Class name should start with capital letter
