@@ -74,7 +74,49 @@ public class Main {
         System.out.println(theName.equals("monish"));
 
 
+//        Arithmetic operator
+
+        System.out.println(10 + 2);
+        System.out.println(10 - 2);
+        System.out.println(10 * 2);
+        System.out.println(10 % 2);
+
+//The Math class
+
+        System.out.println(Math.abs(-10));
+        System.out.println(Math.max(10,20));
+        System.out.println((int) Math.pow(2,10)); // To get whole number add int as mentioned instead getting a decimal
+        System.out.println(Math.min(10,20));
+        System.out.println(Math.sqrt(4));
+
+//Comparison Operator
+
+        int myAge = 25;
+        int someonesAge = 18;
+        boolean isMyAgeGreaterThanSomeonesAge = myAge > someonesAge;
+        System.out.println(isMyAgeGreaterThanSomeonesAge);
+        System.out.println(myAge < someonesAge);
+        System.out.println(myAge == someonesAge);
+        System.out.println(myAge != someonesAge);
+
+//  Logical operator
+
+        boolean isAdult = true;
+        boolean isChild = false;
+        boolean isBearsoldiers = true;
+        System.out.println(isChild && isAdult); // AND
+        System.out.println(isChild || isAdult); // OR
+        System.out.println((!isChild || isAdult) && isBearsoldiers);
+        System.out.println(isAdult);
+        System.out.println(!isChild);
+
+
+
+
+
+
     }
+
 
     // Class name should start with capital letter
     static class Person {
